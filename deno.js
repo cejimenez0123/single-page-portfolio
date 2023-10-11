@@ -2,8 +2,8 @@
 import { serve } from "https://deno.land/std@0.91.0/http/server.ts";
 // import { serveFile } from 'https://deno.land/std@0.91.0/http/file_server.ts';
 
-const server = serve({ port: 8000 });
-
+// const server = serve({ port: 8000 });
+const server = serve({ domain: "fine-dragonfly-59-5g9228h1c9ss.deno.dev"});
 for await (const req of server) {
   try {
     let filePath = req.url;
