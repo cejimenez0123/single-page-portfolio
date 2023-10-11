@@ -3,8 +3,6 @@ import { serve } from "https://deno.land/std@0.91.0/http/server.ts";
 // import { serveFile } from 'https://deno.land/std@0.91.0/http/file_server.ts';
 
 const server = serve({ port: 8000 });
-await Deno.openKv();
-await Deno.openKv("https://api.deno.com/databases/cb598863-f593-4552-987e-fe2b43cc2485/connect");
 
 for await (const req of server) {
   try {
