@@ -1,0 +1,97 @@
+
+  body {
+    font-family: 'Actor';
+    margin: 0;
+}
+  
+  #profile-pic {
+    width: 8cm;
+  }
+  #profile-info{
+    text-align: center;
+  
+    
+  }
+  
+  #about-me {
+    inline-size: 20rem;
+    overflow-wrap:break-word;
+    height: fit-content;
+    background-color: #C8D3DC;
+    margin: 3% 10%;
+    padding: 5%;
+    border-radius: 10%;
+  }
+  
+  .grid-item h5{
+    font-size: 2em;
+}
+.grid-item h6 {
+    font-size: 1em;
+}
+
+  
+#main-section {
+    background-image: linear-gradient(#3066be,#C8D3DC,white);
+    justify-content: center;
+    padding: 5%;
+}
+@media (min-width: 700px) {
+    #main-section .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      /* radial-gradient(#c8d3dc,#3066be,#003b36) */
+    #experience {
+        padding: 2em 10em;
+       
+      }
+      
+    #experience h1 {
+        position: relative;
+        left: 5%;
+        font-size: 4rem;
+
+      }
+  #work{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .task-item {
+    font-size: 1rem;
+    text-align: left;
+    padding-bottom: 3%;
+  }
+}
+  @media (max-width: 700px) {
+    #work{
+        display: flex;
+        flex-direction: column;
+        padding: 0% 2%
+
+    }
+    #experience h1 {
+        left: 2%;
+        font-size: 4rem;
+        
+      
+      }
+    #main-section .inner{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+     
+    }
+    #about-me{
+        margin: auto;
+    }
+    
+}
