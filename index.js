@@ -32,7 +32,7 @@ const experiences = [
             "Wrote unit tests in mockk, and implemented Gradle script CI testing of line coverage with Kover. Wrote documentation and steps to replicate work for code reviews and to improve processes."
         ]}
 ]
-let workSection = document.getElementById("work")
+const workSection = document.getElementById("work")
 experiences.forEach(ex => {
     const div = document.createElement("div");
     div.className = "grid-item"
@@ -40,7 +40,7 @@ experiences.forEach(ex => {
     const title = document.createElement("h6")
     const list = document.createElement("ul")
     ex.points.forEach(point => {
-       let li = document.createElement("li")
+       const li = document.createElement("li")
        li.className = "task-item"
        li.textContent = point
        list.appendChild(li)

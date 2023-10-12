@@ -29,7 +29,7 @@ for await (const req of server) {
     }
 
     req.respond({ body: file, headers });
-  } catch (error) {
+  } catch (_error) {
     req.respond({ status: 404, body: "Not Found" });
   }
 }
