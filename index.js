@@ -1,4 +1,34 @@
+const nodemailer = require("nodemailer") 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let transporter = nodemailer.createTransport({
+        service: 'gmail', // You can also use other services like Yahoo, Outlook, etc.
+        auth: {
+          user: process.env.GMAIL, // Your email address
+          pass: process.env.GMAIL_APP_PASSWORD  // Your email password or app password
+        },
+      });
+    const form = event.target; // or document.getElementById("myForm");
 
+  // Accessing form elements by name
+  const name = form.elements['name'].value;
+  const subject = form.elements['subject'].value
+  const email = form.elements['email'].value
+  const message = form.elements['message'].value;
+  let mailOptions = {
+    from: process.env.GMAIL, 
+    to: email, 
+    subject: "EMAIL FROM:"+name+"-"+subject, 
+    text:message,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return console.log('Error:', error);
+        }
+        console.log('Email sent: ' + info.response);
+      });
+});
 
 
 
