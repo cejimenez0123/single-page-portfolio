@@ -8,8 +8,8 @@
 }
 
 body {
-  background-color: #c4d164;
-  color: #333;
+  background-color: #283d26;
+ 
   line-height: 1.6;
 }
 
@@ -28,7 +28,7 @@ header {
  
 }
 .header{
-   color: black
+   color: white
 }
 @media (max-width:999px) {
   header .profile-photo{
@@ -38,6 +38,9 @@ header {
     margin-bottom: 1em;
   
   }
+}
+.project-item {
+  color:black
 }
 @media (max-width: 500px){
   .project-item img[alt="Project 1"]{
