@@ -1,7 +1,7 @@
-const nodemailer = require("nodemailer") 
+import { createTransport } from "nodemailer"; 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    let transporter = nodemailer.createTransport({
+    let transporter = createTransport({
         service: 'gmail', // You can also use other services like Yahoo, Outlook, etc.
         auth: {
           user: process.env.GMAIL, // Your email address

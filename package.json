@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "deno.js",
   "scripts": {
-    "start":"npm install && open index.html",
+    "start": "npm install nodemailer bootstrap && deno run --allow-net --allow-read server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +11,6 @@
   "description": "",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "nodemailer": "^6.9.15"
+    "nodemailer": "^6.9.16"
   }
 }
